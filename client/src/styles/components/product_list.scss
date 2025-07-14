@@ -1,6 +1,6 @@
 .product_list_container {
   display: grid;
-  gap: 2rem;
+  gap: 3rem 1rem;
   grid-template-columns: repeat(4, 1fr);
   padding: 2rem;
   max-width: 1075px;
@@ -12,5 +12,6 @@
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
+    place-items: center;
   }
 }

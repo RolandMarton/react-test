@@ -2,21 +2,30 @@
 @use "../transitions.scss" as *;
 
 .product_card {
-  background-color: var(--product-card-bg);
-  border: 2px solid var(--product-card-border);
-  border-radius: 8px;
-  padding: 1.5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 250px;
-  margin: auto;
+  padding: 1.5rem;
+  background-color: var(--product-card-bg);
+  border: 2px solid var(--product-card-border);
+  border-radius: 8px;
+}
+
+.product_tooltip {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .product_image {
   max-width: 100%;
-  width: 175px;
-  height: 175px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   margin: 0 auto 1rem auto;
 }
@@ -37,6 +46,10 @@
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #000;
+}
+
+.product_title + .product_price {
+  padding-left: 5px;
 }
 
 .add_to_cart_button {

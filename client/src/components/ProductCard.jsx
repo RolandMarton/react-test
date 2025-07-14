@@ -1,5 +1,7 @@
 import { formatPrice } from "../utils/formatter";
 
+import { tooltip_static } from "../assets";
+
 export const ProductCard = (props) => {
   const formattedPrice = formatPrice({
     num: props.price,
@@ -18,6 +20,12 @@ export const ProductCard = (props) => {
 
   return (
     <div className="product_card">
+      <img
+        className="product_tooltip"
+        src={tooltip_static}
+        alt="Tooltip"
+        draggable="false"
+      />
       <img
         className="product_image"
         src={props.img}
