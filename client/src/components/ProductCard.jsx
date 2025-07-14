@@ -1,30 +1,42 @@
+import { useState, useMemo } from "react";
+
+import { tooltip_static, tooltip_hover } from "../assets";
 import { formatPrice } from "../utils/formatter";
 
-import { tooltip_static } from "../assets";
-
 export const ProductCard = (props) => {
-  const formattedPrice = formatPrice({
-    num: props.price,
-    currency: props.currency,
-    showDecimals: false,
-  });
+  const [isHovered, setIsHovered] = useState(false);
 
-  let formattedOriginalPrice;
-  if (props.original_price != undefined && props.original_price != null) {
-    formattedOriginalPrice = formatPrice({
-      num: props.original_price,
+  /*
+  To prevent recalculations every render - value is memoized
+  */
+  const formattedPrice = useMemo(() => {
+    return formatPrice({
+      num: props.price,
       currency: props.currency,
       showDecimals: false,
     });
-  }
+  }, [props.price, props.currency]);
+
+  const formattedOriginalPrice = useMemo(() => {
+    if (props.original_price != undefined && props.original_price != null) {
+      return formatPrice({
+        num: props.original_price,
+        currency: props.currency,
+        showDecimals: false,
+      });
+    }
+    return null;
+  }, [props.original_price, props.currency]);
 
   return (
     <div className="product_card">
       <img
         className="product_tooltip"
-        src={tooltip_static}
+        src={isHovered ? tooltip_hover : tooltip_static}
         alt="Tooltip"
         draggable="false"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       />
       <img
         className="product_image"
