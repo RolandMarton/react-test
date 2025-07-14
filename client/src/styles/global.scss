@@ -11,20 +11,14 @@ With as * you can use it without prefixes otherwise colors.xy
 These variables can be used in React code as well
 */
 :root {
-  --color-bg: #{$color-light-bg};
-  --color-text: #{$color-light-text};
-  --color-primary: #{$color-primary};
+  --color-bg: #{$color-primary};
+  --color-text: #{$color-dark};
+  --color-white-text: #{$color-primary};
+  --color-header: #{$color-dark};
   --color-accent: #{$color-accent};
 
   --font-main: #{$font-main};
   --transition-default: #{$transition-default};
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #{$color-dark-bg};
-    --color-text: #{$color-dark-text};
-  }
 }
 
 // -------- Reset / Normalize --------
@@ -43,6 +37,13 @@ body {
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-bg);
+
+  background-image: url("../assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-position: 0px -350px;
+  background-size: contain;
+  transform: scaleX(-1);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
@@ -81,7 +82,6 @@ h5,
 h6 {
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 1rem;
   color: var(--color-text);
 }
 
@@ -98,7 +98,6 @@ h3 {
 }
 
 // -------- Utility Classes --------
-
 .container {
   max-width: 1200px;
   margin: 0 auto;

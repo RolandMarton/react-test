@@ -1,3 +1,4 @@
+// This behaves like an enum, but in reality typescript has enum
 export const Currency = {
   POUNDS: "POUNDS",
   DOLLAR: "DOLLAR",

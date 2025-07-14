@@ -4,3 +4,6 @@ Currently base uses all the files.
 */
 
 @use "global";
+
+@use "./components/header.scss";
+@use "./components/title.scss";
