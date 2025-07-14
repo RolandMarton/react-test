@@ -9,8 +9,8 @@ import item7 from "./images/item7.png";
 import item8 from "./images/item8.png";
 
 import cart from "./svg/cart.svg";
-// import tooltip_hover from "./svg/tooltip_hover.svg";
-// import tooltip_static from "./svg/tooltip-static.svg";
+import tooltip_hover from "./svg/tooltip-hover.svg";
+import tooltip_static from "./svg/tooltip-static.svg";
 
 export {
   bg,
@@ -23,6 +23,6 @@ export {
   item7,
   item8,
   cart,
-  // tooltip_hover,
-  // tooltip_static
+  tooltip_hover,
+  tooltip_static,
 };
