@@ -8,7 +8,7 @@ export const ProductCard = (props) => {
   });
 
   let formattedOriginalPrice;
-  if (props.original_price != undefined) {
+  if (props.original_price != undefined && props.original_price != null) {
     formattedOriginalPrice = formatPrice({
       num: props.original_price,
       currency: props.currency,
