@@ -1,7 +1,11 @@
+import { ProductList } from "../components";
+
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <ProductList />
+    </>
+  );
+};
 
-export default Home
+export default Home;
