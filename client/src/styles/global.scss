@@ -1,7 +1,10 @@
 // -------- Imports --------
-@import "colors";
-@import "font";
-@import "transitions";
+/*
+With as * you can use it without prefixes otherwise colors.xy
+*/
+@use "colors" as *;
+@use "fonts" as *;
+@use "transitions" as *;
 
 // -------- Variables --------
 /*
