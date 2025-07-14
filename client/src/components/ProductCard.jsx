@@ -7,6 +7,15 @@ export const ProductCard = (props) => {
     showDecimals: false,
   });
 
+  let formattedOriginalPrice;
+  if (props.original_price != undefined) {
+    formattedOriginalPrice = formatPrice({
+      num: props.original_price,
+      currency: props.currency,
+      showDecimals: false,
+    });
+  }
+
   return (
     <div className="product_card">
       <img
@@ -15,7 +24,16 @@ export const ProductCard = (props) => {
         alt={props.title}
         draggable="false"
       />
-      <h6 className="product_title">{props.title}</h6>
+
+      {formattedOriginalPrice != null && formattedOriginalPrice != undefined ? (
+        <span className="product_title_container">
+          <h6 className="product_title">{props.title}</h6>
+          <p className="product_price">{formattedOriginalPrice}</p>
+        </span>
+      ) : (
+        <h6 className="product_title">{props.title}</h6>
+      )}
+
       <p className="product_price">
         <strong>{formattedPrice}</strong>
       </p>
