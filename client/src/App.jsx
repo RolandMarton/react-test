@@ -1,6 +1,6 @@
 import "./styles/index.scss";
 
-import { FormattedNumber, IntlProvider } from "react-intl";
+import { IntlProvider } from "react-intl";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Home, Checkout, Error } from "./routes";
