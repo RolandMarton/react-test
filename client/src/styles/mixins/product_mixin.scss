@@ -1,0 +1,7 @@
+@mixin product-image-size($size) {
+  max-width: 100%;
+  width: $size;
+  height: $size;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+}

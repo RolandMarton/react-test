@@ -31,17 +31,15 @@ export const ProductCard = (props) => {
 
   return (
     <div className="product_card">
-      <div className="tooltip-wrapper">
-        <img
-          className="product_tooltip"
-          src={isHovered ? tooltip_hover : tooltip_static}
-          alt="Tooltip"
-          draggable="false"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        />
-        {isHovered && <Tooltip />}
-      </div>
+      <img
+        className="product_tooltip"
+        src={isHovered ? tooltip_hover : tooltip_static}
+        alt="Tooltip"
+        draggable="false"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      />
+      {isHovered && <Tooltip {...props} />}
 
       <img
         className="product_image"

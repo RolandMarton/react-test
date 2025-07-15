@@ -1,6 +1,8 @@
 @use "../colors.scss" as *;
 @use "../transitions.scss" as *;
 
+@use "../mixins/product_mixin.scss" as *;
+
 .product_card {
   position: relative;
   display: flex;
@@ -23,11 +25,11 @@
 }
 
 .product_image {
-  max-width: 100%;
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin: 0 auto 1rem auto;
+  @include product-image-size(150px);
+}
+
+.small_product_image {
+  @include product-image-size(100px);
 }
 
 .product_title {

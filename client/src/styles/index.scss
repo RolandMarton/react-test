@@ -10,3 +10,5 @@ Currently base uses all the files.
 @use "./components/product_list.scss";
 @use "./components/product_card.scss";
 @use "./components/tooltip.scss";
+
+@use "./mixins/product_mixin.scss";
