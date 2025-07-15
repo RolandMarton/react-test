@@ -97,7 +97,7 @@ export const products = [
       Connectivity: "USB-A / USB-C",
       Microphone: "Noise-cancelling boom mic",
       Audio: "Stereo with Dynamic EQ",
-      WearingStyle: "Over-the-head",
+      "Wearing style": "Over-the-head",
       Compatibility: "PC and Mac",
     },
   }),
@@ -114,7 +114,7 @@ export const products = [
     key_features: {
       Connectivity: "Bluetooth + USB Dongle",
       Range: "Up to 50 meters",
-      BatteryLife: "24 hours talk time",
+      "Battery life": "24 hours talk time",
       Microphone: "Noise-cancelling with Acoustic Fence",
       Compatibility: "PC, Mac, Mobile",
     },
@@ -132,7 +132,7 @@ export const products = [
     key_features: {
       Connectivity: "DECT + USB + Desk Phone",
       Range: "Up to 180 meters",
-      BatteryLife: "Up to 13 hours",
+      "Battery life": "Up to 13 hours",
       Audio: "Wideband audio with noise canceling",
       Base: "Multi-device switching",
     },
@@ -149,8 +149,8 @@ export const products = [
       "True wireless earbuds designed for professionals on the go with adaptive ANC and touch controls.",
     key_features: {
       Connectivity: "Bluetooth 5.3",
-      BatteryLife: "Up to 16.5 hours with case",
-      NoiseCancelation: "Adaptive ANC",
+      "Battery life": "Up to 16.5 hours with case",
+      "Noise cancellation": "Adaptive ANC",
       Microphone: "Triple-mic array with windsmart",
       Charging: "USB-C and Wireless Charging",
     },
