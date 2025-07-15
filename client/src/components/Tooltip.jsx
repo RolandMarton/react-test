@@ -1,6 +1,6 @@
-export const Tooltip = (props) => {
+export const Tooltip = ({ positionClass, ...props }) => {
   return (
-    <div className="tooltip_container">
+    <div className={`tooltip_container ${positionClass}`}>
       <img
         className="small_product_image"
         src={props.img}

@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 
 import { tooltip_static, tooltip_hover } from "../assets";
 import { formatPrice } from "../utils/formatter";
@@ -6,6 +6,39 @@ import { Tooltip } from "./Tooltip";
 
 export const ProductCard = (props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState("tooltip-right");
+
+  const cardRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+
+    setTimeout(() => {
+      if (!cardRef.current) {
+        console.log("Not current");
+        return;
+      }
+
+      const rect = cardRef.current.getBoundingClientRect();
+      const tooltipWidth = 350;
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth - rect.right < tooltipWidth) {
+        if (rect.left > tooltipWidth) {
+          setTooltipPosition("tooltip-left");
+        } else {
+          setTooltipPosition("tooltip-bottom");
+        }
+      } else {
+        setTooltipPosition("tooltip-right");
+      }
+    }, 0);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setTooltipPosition("tooltip-right");
+  };
 
   /*
   To prevent recalculations every render - value is memoized
@@ -30,16 +63,16 @@ export const ProductCard = (props) => {
   }, [props.original_price, props.currency]);
 
   return (
-    <div className="product_card">
+    <div className="product_card" ref={cardRef}>
       <img
         className="product_tooltip"
         src={isHovered ? tooltip_hover : tooltip_static}
         alt="Tooltip"
         draggable="false"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       />
-      {isHovered && <Tooltip {...props} />}
+      {isHovered && <Tooltip positionClass={tooltipPosition} {...props} />}
 
       <img
         className="product_image"

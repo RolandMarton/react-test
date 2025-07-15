@@ -2,8 +2,6 @@
 
 .tooltip_container {
   position: absolute;
-  left: 97.5%;
-  top: 7.5px;
   width: 350px;
   display: flex;
   gap: 1rem;
@@ -12,6 +10,22 @@
   padding: 1rem;
   z-index: 1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip_container.tooltip-right {
+  left: 98.5%;
+  top: 7.5px;
+}
+
+.tooltip_container.tooltip-left {
+  right: 20%;
+  top: 7.5px;
+}
+
+.tooltip_container.tooltip-bottom {
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .info-container {
