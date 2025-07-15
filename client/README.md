@@ -198,15 +198,22 @@ Split styles into modular SCSS files:
 |       `-- formatter.js
 `-- vite.config.js
 *--**--**--**--**--**--**--*
+```
 
 ## 🖼 Gallery
 
-<!--
-Add your gallery images here, for example:
+https://github.com/user-attachments/assets/efce8a02-8399-418a-a019-ef617c66ac48
 
-![Image1](./src/assets/images/item1.png)
-![Image2](./src/assets/images/item2.png)
-![Image3](./src/assets/images/item3.png)
+<div align="center">
+  <img width="30%" src="https://github.com/user-attachments/assets/7dffa855-d675-40e5-8135-0bbd4b6173da" />
+  <img width="30%" src="https://github.com/user-attachments/assets/d0b5e0a8-e2c5-4998-bddf-e5c2b0b45ff8" />
+  <img width="30%" src="https://github.com/user-attachments/assets/f08c61ac-4700-4618-91fa-838223ccf77e" />
 
--->
+  <img width="30%" src="https://github.com/user-attachments/assets/9f510422-97d5-461d-88c5-e27e781e33fb" />
+  <img width="30%" src="https://github.com/user-attachments/assets/90bec9ea-33cd-435f-837a-95c0145fb700" />
+  <img width="30%" src="https://github.com/user-attachments/assets/39eb9ee1-eba8-4a2a-af6f-5e14a3c90491" />
+  <img width="30%" src="https://github.com/user-attachments/assets/a8929a61-500b-41e2-8353-d0f3e47da563" />
+  <img width="30%" src="https://github.com/user-attachments/assets/c71d742e-2c43-4e69-a7a1-81d4933397a0" />
+
+</div>
 
