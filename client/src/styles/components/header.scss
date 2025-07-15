@@ -31,7 +31,25 @@
 }
 
 .shopping_cart_text {
-  font-size: .75em;
+  font-size: 0.75em;
+}
+
+.shopping_cart_item_count_container {
+  position: absolute;
+  background-color: var(--color-accent);
+  width: 17.5px;
+  height: 17.5px;
+  border-radius: 50%;
+  left: -7.5px;
+  bottom: -7.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopping_cart_item_count {
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 350px) {
