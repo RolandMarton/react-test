@@ -40,9 +40,7 @@ export const ProductCard = (props) => {
     setTooltipPosition("tooltip-right");
   };
 
-  /*
-  To prevent recalculations every render - value is memoized
-  */
+
   const formattedPrice = useMemo(() => {
     return formatPrice({
       num: props.price,
