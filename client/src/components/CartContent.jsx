@@ -1,8 +1,12 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import CartContext from "../store/cart-context";
 
 const CartContent = () => {
   const cartCtx = useContext(CartContext);
+  const navigate = useNavigate();
+
   const totalItemsCount = cartCtx.items.reduce(
     (acc, item) => acc + item.amount,
     0
@@ -11,6 +15,10 @@ const CartContent = () => {
     (acc, item) => acc + item.amount * item.price,
     0
   );
+
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
 
   return (
     <div className="cart-content-container">
@@ -54,7 +62,11 @@ const CartContent = () => {
         </>
       )}
 
-      <button className="checkout-button" disabled={totalItemsCount == 0}>
+      <button
+        className="checkout-button"
+        disabled={totalItemsCount === 0}
+        onClick={handleCheckout}
+      >
         Checkout
       </button>
     </div>
