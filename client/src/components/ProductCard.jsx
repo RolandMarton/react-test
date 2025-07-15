@@ -1,14 +1,26 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useContext } from "react";
 
 import { tooltip_static, tooltip_hover } from "../assets";
 import { formatPrice } from "../utils/formatter";
 import { Tooltip } from "./Tooltip";
+
+import CartContext from "../store/cart-context";
 
 export const ProductCard = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState("tooltip-right");
 
   const cardRef = useRef(null);
+  const cartCtx = useContext(CartContext);
+
+  const addToCartHandler = () => {
+    cartCtx.addItem({
+      id: props.id,
+      title: props.title,
+      amount: 1,
+      price: props.price,
+    });
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -39,7 +51,6 @@ export const ProductCard = (props) => {
     setIsHovered(false);
     setTooltipPosition("tooltip-right");
   };
-
 
   const formattedPrice = useMemo(() => {
     return formatPrice({
@@ -89,7 +100,12 @@ export const ProductCard = (props) => {
       <p className="product_price">
         <strong>{formattedPrice}</strong>
       </p>
-      <button type="button" className="add_to_cart_button">
+
+      <button
+        type="button"
+        onClick={addToCartHandler}
+        className="add_to_cart_button"
+      >
         Add to Cart
       </button>
     </div>
