@@ -24,7 +24,7 @@
 .description-title,
 .features-title {
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin-bottom: 0.25rem;
 }
 
@@ -41,22 +41,23 @@
 }
 
 .feature-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  column-gap: 0.5rem;
   font-size: 0.75rem;
+  align-items: start;
 }
 
 .feature-key {
   font-weight: 500;
   color: #222;
-  margin-right: 0.5rem;
   font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .feature-value {
   color: #555;
-  text-align: right;
-  max-width: 50%;
-  word-break: break-word;
   font-size: 0.75rem;
+  word-break: break-word;
+  text-align: left;
 }
