@@ -16,7 +16,12 @@ const CartContent = () => {
     0
   );
 
+  const resetCartStateHandler = () => {
+    cartCtx.resetState();
+  };
+
   const handleCheckout = () => {
+    resetCartStateHandler();
     navigate("/checkout");
   };
 
