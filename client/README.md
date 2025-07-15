@@ -1,18 +1,20 @@
-# React + Vite Project
 
-## 🔧 Tools Used
+# Fingertips Store Project
 
-- **Build Tool + Dev Server**: [Vite](https://vitejs.dev/) with Babel JavaScript
-  compiler
+## Plan
+
+### 🔧 Tools
+
+- **Build Tool + Dev Server**: [Vite](https://vitejs.dev/) with Babel JavaScript compiler
 - **UI Library**: React (JavaScript)
 - **CSS Preprocessor**: SASS (SCSS syntax)
 - **Animation Library**: [Framer Motion](https://www.framer.com/motion/)
 
-## 🛠️ Utility Scripts
+### 🛠️ Utility Scripts
 
 - `filetree.py`: Checks and prints the current project file structure.
 
-## 📁 Starting Project Structure
+### 📁 Starting Project Structure
 
 ```
 |-- README.md
@@ -66,7 +68,7 @@
 |-- vite.config.js
 ```
 
-## 🧩 `index.js` Purpose
+### 🧩 `index.js` Purpose
 
 This file is used for clean and centralized exports. For example:
 
@@ -78,13 +80,13 @@ export { Card, FormField, Loader };
 import { Loader, Card, FormField } from "../components";
 ```
 
-## 🎨 Global SCSS (`index.scss`)
+### 🎨 Global SCSS (`index.scss`)
 
-### 🔑 Variables
+#### 🔑 Variables
 
 - CSS root variables, including optional dark mode support.
 
-### 🔄 Reset / Normalize
+#### 🔄 Reset / Normalize
 
 - Universal selector reset
 - HTML and body base styles
@@ -93,14 +95,14 @@ import { Loader, Card, FormField } from "../components";
 - Form/input elements
 - Heading elements (h1–h6)
 
-### ♻️ Utility Classes
+#### ♻️ Utility Classes
 
 - `.container`
 - `.center`
 - `.text-center`
 - `.hidden`
 
-### 💡 Future Suggestions
+#### 💡 Future Suggestions
 
 Split styles into modular SCSS files:
 
@@ -110,18 +112,18 @@ Split styles into modular SCSS files:
 - `typography.scss`
 - `themes/dark.scss`, `themes/light.scss`
 
-# What could be done in the future
+## 🛠 What could be done in the future
 
 - Add comments to each functions params return
-- Add framer motion to animate components - make it more alive - enhance user
-  experience
+- Add framer motion to animate components - make it more alive - enhance user experience
 - Add tests - unit tests, integration tests, end to end tests (Jest, Cypress)
 - Add custom hooks
 - Add server to fetch data from backend - for example NodeJs
-- Add route guards - Error page which always gives back feed back about error codes and navigates the user back to home page
+- Add route guards - Error page which always gives back feedback about error codes and navigates the user back to home page
 
-# Finish project structure
+## 📁 Finished Project Structure
 
+```
 *--**--**--**--**--**--**--*
 |-- README.md
 |-- eslint.config.js
@@ -196,3 +198,15 @@ Split styles into modular SCSS files:
 |       `-- formatter.js
 `-- vite.config.js
 *--**--**--**--**--**--**--*
+
+## 🖼 Gallery
+
+<!--
+Add your gallery images here, for example:
+
+![Image1](./src/assets/images/item1.png)
+![Image2](./src/assets/images/item2.png)
+![Image3](./src/assets/images/item3.png)
+
+-->
+
