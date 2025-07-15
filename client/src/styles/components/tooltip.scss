@@ -1,0 +1,19 @@
+@use "../colors.scss" as *;
+
+.tooltip_wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+}
+
+.tooltip_container {
+  position: absolute;
+  left: 97.5%;
+  top: 7.5px;
+  width: 200px;
+  padding: 1rem;
+  background: var(--tooltip-bg);
+  border-radius: 4px;
+  z-index: 1;
+}

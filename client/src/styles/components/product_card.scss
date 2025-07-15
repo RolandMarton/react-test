@@ -48,7 +48,7 @@
   color: #000;
 }
 
-.product_title + .product_price {
+span.product_title_container > p.product_price {
   padding-left: 5px;
 }
 
