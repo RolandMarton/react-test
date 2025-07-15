@@ -15,6 +15,32 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 85px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid var(--product-card-bg);
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: 85px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 12px solid var(--product-card-border);
+    z-index: 1;
+  }
+
   .cart-content-items-count {
     font-weight: bold;
     margin-bottom: 0.5rem;
